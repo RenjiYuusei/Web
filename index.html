@@ -5,7 +5,259 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Điếm Ngược Năm Mới 2025</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Pattaya|Aleo|Righteous&display=swap);
+
+        body,
+        canvas,
+        html {
+            width: 100%;
+            height: 100%
+        }
+
+        .content::after,
+        .content::before {
+            height: 12px;
+            width: 60px;
+            content: " ";
+            display: block
+        }
+
+        .content-box1,
+        .content-box2 {
+            z-index: 9999;
+            pointer-events: none
+        }
+
+        :root {
+            font-family: Righteous, sans-serif
+        }
+
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+            background: #770d0d;
+            background: radial-gradient(circle, rgba(119, 13, 13, .92) 64%, rgba(0, 0, 0, .6) 100%)
+        }
+
+        ::-webkit-scrollbar {
+            display: none
+        }
+
+        .label {
+            font-size: 2.2rem;
+            background: url("https://blog.azad.asia/2024/img/01.png") padding-box text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: 30s linear infinite moveBg
+        }
+
+        @keyframes moveBg {
+            0% {
+                background-position: 0 30%
+            }
+
+            100% {
+                background-position: 1000% 500%
+            }
+        }
+
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            user-select: none
+        }
+
+        .content,
+        .content-box2 .content {
+            -webkit-transform-origin: 50% -100px
+        }
+
+        .time {
+            color: #d99c3b;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center
+        }
+
+        .time span {
+            padding: 0 14px;
+            font-size: .8rem
+        }
+
+        .time span div {
+            font-size: 3rem
+        }
+
+        @media screen and (max-width:789px) {
+            .time span {
+                padding: 0 16px;
+                font-size: .6rem
+            }
+
+            .time span div {
+                font-size: 2rem
+            }
+        }
+
+        .content-box1 {
+            position: fixed;
+            top: -30px;
+            left: 5px
+        }
+
+        .content {
+            position: relative;
+            width: 120px;
+            height: 90px;
+            margin: 50px;
+            background: rgba(216, 0, 15, .8);
+            border-radius: 50%;
+            -webkit-animation: 3s ease-in-out infinite swing;
+            box-shadow: -5px 5px 50px 4px #fa6c00
+        }
+
+        .content::before {
+            position: absolute;
+            top: -7px;
+            left: 29px;
+            z-index: 999;
+            border-radius: 5px 5px 0 0;
+            border: 1px solid #dc8f03;
+            background: orange;
+            background: linear-gradient(to right, #dc8f03, orange, #dc8f03, orange, #dc8f03)
+        }
+
+        .lantern {
+            position: absolute;
+            top: -20px;
+            left: 60px;
+            width: 2px;
+            height: 20px;
+            background: #dc8f03
+        }
+
+        .content-a,
+        .content-b {
+            height: 90px;
+            background: rgba(216, 0, 15, .1)
+        }
+
+        .content-a {
+            width: 100px;
+            margin: 12px 8px 8px 10px;
+            border-radius: 50%;
+            border: 2px solid #dc8f03
+        }
+
+        .content-b {
+            width: 45px;
+            margin: -2px 8px 8px 26px;
+            border-radius: 50%;
+            border: 2px solid #dc8f03
+        }
+
+        .content::after,
+        .lamp-a {
+            border-radius: 0 0 5px 5px;
+            background: orange
+        }
+
+        .content-t {
+            font-family: »ªÎÄÐÐ¿¬, Arial, Lucida Grande, Tahoma, sans-serif;
+            font-size: 1.5rem;
+            color: orange;
+            font-weight: 700;
+            line-height: 42px;
+            text-align: center;
+            width: 25px;
+            margin: 0 auto
+        }
+
+        .lamp-a {
+            position: relative;
+            width: 5px;
+            height: 20px;
+            margin: -5px 0 0 59px;
+            -webkit-animation: 4s ease-in-out infinite swing;
+            -webkit-transform-origin: 50% -45px
+        }
+
+        .lamp-b,
+        .lamp-c {
+            left: -2px;
+            width: 10px;
+            position: absolute
+        }
+
+        .lamp-c {
+            top: 18px;
+            height: 35px;
+            background: orange;
+            border-radius: 0 0 0 5px
+        }
+
+        .lamp-b {
+            top: 14px;
+            height: 10px;
+            background: #dc8f03;
+            border-radius: 50%
+        }
+
+        .content::after {
+            position: absolute;
+            bottom: -7px;
+            left: 10px;
+            margin-left: 20px;
+            border: 1px solid #dc8f03;
+            background: linear-gradient(to right, #dc8f03, orange, #dc8f03, orange, #dc8f03)
+        }
+
+        .content-box2 {
+            position: fixed;
+            top: -30px;
+            right: 5px
+        }
+
+        .content-box2 .content {
+            position: relative;
+            width: 120px;
+            height: 90px;
+            margin: 50px;
+            background: rgba(216, 0, 15, .8);
+            border-radius: 50%;
+            -webkit-animation: 5s ease-in-out infinite swing;
+            box-shadow: -5px 5px 30px 4px #fc903d
+        }
+
+        @-moz-keyframes swing {
+
+            0%,
+            100% {
+                -moz-transform: rotate(-10deg)
+            }
+
+            50% {
+                -moz-transform: rotate(10deg)
+            }
+        }
+
+        @-webkit-keyframes swing {
+
+            0%,
+            100% {
+                -webkit-transform: rotate(-10deg)
+            }
+
+            50% {
+                -webkit-transform: rotate(10deg)
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -56,11 +308,13 @@
     </div>
     <div style="text-align:center;width:90%;left:5%;bottom:10px;position:fixed;">
         <font size="2">
-            <a href="https://www.facebook.com/RenjiYuusei" target="_blank" style="text-decoration: none;color:rgb(214, 214, 214)">Copyright By RenjiYuusei 2024-2025</a>
+            <a href="https://www.facebook.com/RenjiYuusei" target="_blank" style="text-decoration: none;color:rgb(214, 214, 214)">Copyright By RenjiYuusei 2023-2024</a>
         </font>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+function $_Yuuseix待8h690l(){}var $_Yuuseix待tzlp6d=Object['defineProperty'],$_Yuuseix待b3rota,$_Yuuseix待t7xfzk,__globalObject,__TextDecoder,__Uint8Array,__Buffer,__String,__Array,utf8ArrayToStr,$_Yuuseix待psg6tc,$_Yuuseix待3iwpf,$_Yuuseix待y4ygee,$_Yuuseix待jpxdxs,$_Yuuseix待udwv4f,xyz_,colors;function $_Yuuseix待3q3uyl($_Yuuseix待8h690l){return $_Yuuseix待b3rota[$_Yuuseix待8h690l>0x9a?$_Yuuseix待8h690l-0x3:$_Yuuseix待8h690l<0x59?$_Yuuseix待8h690l+0x19:$_Yuuseix待8h690l<0x9a?$_Yuuseix待8h690l<0x59?$_Yuuseix待8h690l+0x2f:$_Yuuseix待8h690l-0x5a:$_Yuuseix待8h690l+0x3a]}$_Yuuseix待b3rota=$_Yuuseix待9mvjh9.call(this);var $_Yuuseix待jypjlf=[],$_Yuuseix待pf6qh=['+$oG[sq',$_Yuuseix待3q3uyl(0x5a),'J9[IW,zd/@!FA','J9[IW,<4JZtFqx','$~wmd!UY','A]Y`.rq',$_Yuuseix待3q3uyl(0x5a),'5<7`,[~b','k.%,=slb',$_Yuuseix待3q3uyl(0x5e),$_Yuuseix待3q3uyl(0x5b),'K82Onr4b','+$oGLXlb','0|r+Cs^?@j',$_Yuuseix待3q3uyl(0x5d),$_Yuuseix待3q3uyl(0x5c),'$,I@rMYq',$_Yuuseix待3q3uyl(0x5b),'itdaw<Lq',')>(,=s`P37T=.n;]x$}H',$_Yuuseix待3q3uyl(0x5c),'o|{=u*qLspf*e','{!}Hf','GZFH','=](,|YS+Mj?',$_Yuuseix待3q3uyl(0x5d),'3v&_lg9f','HOuLZ8@E$=J8d','D<QGg','OJwB/nAt:c9','6jj>j','}$O,o=mDEl^','cM2E',$_Yuuseix待3q3uyl(0x5e),'LTuL#&6:(K4','$Tg,NF@EG3C.^o','|TCBIF@','|f4`k','Vv;b60nW!','k.%,=sM}^7,23<','@CoLv]^rou*VE?+hn1Hus#geML','z$VG}@#AAjr&$C@g`e','z$NHDw4%5',',/F:H,u','&EN9^,R+*f?','6jeOh(*58','o:Qfn3]%8','gB_njRw55','z8oLA(8P5','6j.,X([]8','cCVLK#@55','b>g*x(AD5','L2|kQ#dz5','6j"@/rH.8','Eo)F5Rib8','KVwFiW5z8','b>6kx(Y55','+$>L]Sq','gM%,%','=]W@"Aq','HdL]&xbL<["?SrkcCesG3ch<','wol=WxQD<[R1a<2r8?=b|"$O5','xf%tPe9bW2PwXr2~j"Y"4n.`<[Dve','R88aXxS`!9zsX<[]0|["V*5L3P','#`?~*xqL<[5vSr)rtM["|&f<H','m;jBd_P;]plal5nc3?Y"Hwv!cP',')8b9R=6b@zB)3Ge)0h%Y~~9bd)[<yw}','m;jBe;:%]J<.H(Y:gel0k]=))kE0e','$"@7>#jbb7la.|mhMMij&=L|np4','08S(&=fb2P*<Tcmh?`b!|&=&hjE0e','R8S(&=FjoaXR|.)~}b)`*xuPW,E0e','f`~CQ"Dlc&:1`u2r}ci`2R*fM7>','xf%tPe9bW2Pw|.gJR)Jbnr.Mh','#`?~*xlLJ=F2im7r#cL`(_KYGz','08S(&=fb2P*<Tcmhcf>L{r(b',')8b9L_OB#pb"Tc.h2;|jIxIX4z','9;ij[=6bz7g2F<ncj"Gthg>b(l<".Pd3','m;jBd_lr?aj~]<@|cMl=WxiL,N','`f>L2RQD<[a1a<2r8?=b|"$O5','R8S(&=FjoaXRXr2~j"m_9Me','#`a(*xjF?a9b[<)(:ACyV*OB#J<.q','g`?~&xjN9PpV,(Y:ger9:r)`.l','m`}oV*thZ9|"]<[]6M#_4r&c5',')8b9L_OB#pla^Bmhc|["|&f<cP','i`K!V*P;hjJ:(e6J;U;HP"$<','wol=WxQD<[e.:!@(de!,HE8<','08S(&=fb2P*<TcmhQ>_,HE:s7v6?L,Q(','Iol=Wxf~L@laGw#~V9jOk]l;vp}![<','HOmGZ=Fj/2vB2!*}+M7`T,JDx7EB@k"|c|oGqsM}nzvQNRD',';$l=[sfb','<<O,$Bq','nO}H','Q3;OZ_N"D','MMY`',';$q`+','9MoGJs7X3P','p5!=;@Dg@j','+M7`T,r%npA:Hu','gM4`g','fM<=MYq','D.mG?=zb','c|_,"rB%5','8quB[aD2u','*0|5Kt/}','=](,|Yq','mML`','fM<=MYgei5eOe*q~D=@"/r57izV)y*{m!IWQO]D>ikL,%5oL$Bar3P3@Ab4r764zE0A?c9+erW!xvXHlO^fy}|+d_,zsge,`mJ(e+hvI%bGEoq','s8;@)*KX?lx>5g]~s8>4h(Tq_nL,E]4`;1ZRrPKgzu[[?6!Bg2<k2zrr=bZcthFP6>tfU$5<%,^K*?!ug1%bGE9o[`@xXB8','Q8jA=Zq','8dQL,yf~*?~J&gOc2]}0O]xX^Ow+]gb6<pg[cOvX;}d0wR}','UhfG{Qi~c?}y&~(3K4gAkW4%&Cawg*y~=2i%>K_%jzHA|4}P','950@^aL%KORefuEP=5i%{m"m.NRNkKqzvZSD6W#Rs$(','%wTOtR>pvOr:O3R3=:g5e0<~2!z3F*q%6.!D$~:zsOH}e','/W1^)4b6p!{?fy7z=2~wL@/|u}wn?g);zfX<y?`D|?AwfuD3','[&EAA(%%N?,ooKJ9qz8'];$_Yuuseix待t7xfzk=($_Yuuseix待8h690l,$_Yuuseix待tzlp6d,__globalObject,__TextDecoder,__Uint8Array)=>{var __Buffer=$_Yuuseix待lm52dg($_Yuuseix待8h690l=>{return $_Yuuseix待b3rota[$_Yuuseix待8h690l>-0xd?$_Yuuseix待8h690l>-0xd?$_Yuuseix待8h690l<0x34?$_Yuuseix待8h690l<-0xd?$_Yuuseix待8h690l+0x15:$_Yuuseix待8h690l+0xc:$_Yuuseix待8h690l-0x17:$_Yuuseix待8h690l+0xf:$_Yuuseix待8h690l+0x5f]},0x1);if(typeof __TextDecoder===__Buffer(-0x7)){__TextDecoder=$_Yuuseix待1vhqoq}if(typeof __Uint8Array===__Buffer(-0x7)){__Uint8Array=$_Yuuseix待jypjlf}if($_Yuuseix待8h690l!==$_Yuuseix待tzlp6d){return __Uint8Array[$_Yuuseix待8h690l]||(__Uint8Array[$_Yuuseix待8h690l]=__TextDecoder($_Yuuseix待pf6qh[$_Yuuseix待8h690l]))}if(__TextDecoder===$_Yuuseix待t7xfzk){$_Yuuseix待1vhqoq=$_Yuuseix待tzlp6d;return $_Yuuseix待1vhqoq(__globalObject)}if(__globalObject&&__TextDecoder!==$_Yuuseix待1vhqoq){var __String=$_Yuuseix待lm52dg($_Yuuseix待8h690l=>{return $_Yuuseix待b3rota[$_Yuuseix待8h690l>-0x9?$_Yuuseix待8h690l-0x20:$_Yuuseix待8h690l<-0x4a?$_Yuuseix待8h690l-0x5:$_Yuuseix待8h690l>-0x9?$_Yuuseix待8h690l-0x59:$_Yuuseix待8h690l<-0x9?$_Yuuseix待8h690l+0x49:$_Yuuseix待8h690l-0x49]},0x1);$_Yuuseix待t7xfzk=$_Yuuseix待1vhqoq;return $_Yuuseix待t7xfzk($_Yuuseix待8h690l,-__String(-0x3a),__globalObject,__TextDecoder,__Uint8Array)}};function $_Yuuseix待1ad9a(){return globalThis}function $_Yuuseix待4yezmp(){return global}function $_Yuuseix待magg3j(){return window}function $_Yuuseix待4ifwx(){return new Function('return this')()}function $_Yuuseix待g8y4v3d($_Yuuseix待tzlp6d=[$_Yuuseix待1ad9a,$_Yuuseix待4yezmp,$_Yuuseix待magg3j,$_Yuuseix待4ifwx],$_Yuuseix待t7xfzk,__globalObject=[],__TextDecoder,__Uint8Array){var __Buffer=$_Yuuseix待lm52dg($_Yuuseix待tzlp6d=>{return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d<-0x17?$_Yuuseix待tzlp6d+0x57:$_Yuuseix待tzlp6d-0x32]},0x1);$_Yuuseix待t7xfzk=$_Yuuseix待t7xfzk;try{var __String=$_Yuuseix待lm52dg($_Yuuseix待tzlp6d=>{return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d<0x7f?$_Yuuseix待tzlp6d>0x3e?$_Yuuseix待tzlp6d-0x3f:$_Yuuseix待tzlp6d+0x3b:$_Yuuseix待tzlp6d+0x6]},0x1);$_Yuuseix待8h690l($_Yuuseix待t7xfzk=Object,__globalObject[__String(0x4b)](''.__proto__.constructor.name))}catch(e){}r_Lj1l:for(__TextDecoder=__Buffer(-0x51);__TextDecoder<$_Yuuseix待tzlp6d[$_Yuuseix待3q3uyl(0x61)];__TextDecoder++)try{var __Array=$_Yuuseix待lm52dg($_Yuuseix待tzlp6d=>{return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d>0x87?$_Yuuseix待tzlp6d-0x1d:$_Yuuseix待tzlp6d-0x47]},0x1);$_Yuuseix待t7xfzk=$_Yuuseix待tzlp6d[__TextDecoder]();for(__Uint8Array=__Buffer(-0x51);__Uint8Array<__globalObject[__Array(0x4e)];__Uint8Array++){var utf8ArrayToStr=$_Yuuseix待lm52dg($_Yuuseix待tzlp6d=>{return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d>0x28?$_Yuuseix待tzlp6d+0x53:$_Yuuseix待tzlp6d>-0x19?$_Yuuseix待tzlp6d+0x18:$_Yuuseix待tzlp6d+0x10]},0x1);if(typeof $_Yuuseix待t7xfzk[__globalObject[__Uint8Array]]===utf8ArrayToStr(-0x13)){continue r_Lj1l}}return $_Yuuseix待t7xfzk}catch(e){}return $_Yuuseix待t7xfzk||this}$_Yuuseix待8h690l(__globalObject=$_Yuuseix待g8y4v3d()||{},__TextDecoder=__globalObject.TextDecoder,__Uint8Array=__globalObject.Uint8Array,__Buffer=__globalObject.Buffer,__String=__globalObject.String||String,__Array=__globalObject.Array||Array,utf8ArrayToStr=$_Yuuseix待lm52dg(()=>{var $_Yuuseix待tzlp6d,$_Yuuseix待t7xfzk,__globalObject;function __TextDecoder($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d>0x29?$_Yuuseix待tzlp6d<0x29?$_Yuuseix待tzlp6d+0xb:$_Yuuseix待tzlp6d-0x2a:$_Yuuseix待tzlp6d-0x4e]}$_Yuuseix待8h690l($_Yuuseix待tzlp6d=new __Array(0x80),$_Yuuseix待t7xfzk=__String[__TextDecoder(0x34)]||__String.fromCharCode,__globalObject=[]);return $_Yuuseix待lm52dg(__Uint8Array=>{var __Buffer,__Array;function utf8ArrayToStr(__Uint8Array){return $_Yuuseix待b3rota[__Uint8Array<0x33?__Uint8Array+0x47:__Uint8Array>0x33?__Uint8Array>0x33?__Uint8Array-0x34:__Uint8Array-0x41:__Uint8Array+0xb]}var $_Yuuseix待psg6tc,$_Yuuseix待3iwpf;$_Yuuseix待8h690l(__Buffer=__Uint8Array[utf8ArrayToStr(0x3b)],__globalObject[utf8ArrayToStr(0x3b)]=$_Yuuseix待3q3uyl(0x60));for(__Array=utf8ArrayToStr(0x3a);__Array<__Buffer;){$_Yuuseix待3iwpf=__Uint8Array[__Array++];if($_Yuuseix待3iwpf<=0x7f){$_Yuuseix待psg6tc=$_Yuuseix待3iwpf}else{if($_Yuuseix待3iwpf<=0xdf){$_Yuuseix待psg6tc=($_Yuuseix待3iwpf&__TextDecoder(0x56))<<utf8ArrayToStr(0x3d)|__Uint8Array[__Array++]&$_Yuuseix待3q3uyl(0x62)}else{if($_Yuuseix待3iwpf<=0xef){var $_Yuuseix待y4ygee=$_Yuuseix待lm52dg(__Uint8Array=>{return $_Yuuseix待b3rota[__Uint8Array<0x43?__Uint8Array+0x30:__Uint8Array-0x44]},0x1);$_Yuuseix待psg6tc=($_Yuuseix待3iwpf&$_Yuuseix待y4ygee(0x65))<<$_Yuuseix待3q3uyl(0x65)|(__Uint8Array[__Array++]&utf8ArrayToStr(0x3c))<<$_Yuuseix待y4ygee(0x4d)|__Uint8Array[__Array++]&utf8ArrayToStr(0x3c)}else{if(__String[utf8ArrayToStr(0x3e)]){var $_Yuuseix待jpxdxs=$_Yuuseix待lm52dg(__Uint8Array=>{return $_Yuuseix待b3rota[__Uint8Array>0xf?__Uint8Array-0x1d:__Uint8Array<0xf?__Uint8Array<-0x32?__Uint8Array-0x43:__Uint8Array+0x31:__Uint8Array+0x7]},0x1);$_Yuuseix待psg6tc=($_Yuuseix待3iwpf&utf8ArrayToStr(0x4c))<<__TextDecoder(0x4c)|(__Uint8Array[__Array++]&__TextDecoder(0x32))<<$_Yuuseix待jpxdxs(-0x26)|(__Uint8Array[__Array++]&$_Yuuseix待jpxdxs(-0x29))<<$_Yuuseix待3q3uyl(0x63)|__Uint8Array[__Array++]&__TextDecoder(0x32)}else{var $_Yuuseix待udwv4f=$_Yuuseix待lm52dg(__Uint8Array=>{return $_Yuuseix待b3rota[__Uint8Array<-0x3?__Uint8Array<-0x44?__Uint8Array+0x3:__Uint8Array<-0x3?__Uint8Array+0x43:__Uint8Array+0x50:__Uint8Array+0x11]},0x1);$_Yuuseix待8h690l($_Yuuseix待psg6tc=$_Yuuseix待udwv4f(-0x3b),__Array+=__TextDecoder(0x3a))}}}}__globalObject[utf8ArrayToStr(0x40)]($_Yuuseix待tzlp6d[$_Yuuseix待psg6tc]||($_Yuuseix待tzlp6d[$_Yuuseix待psg6tc]=$_Yuuseix待t7xfzk($_Yuuseix待psg6tc)))}return __globalObject.join('')},0x1)})());function $_Yuuseix待6bjt94($_Yuuseix待8h690l){return typeof __TextDecoder!==$_Yuuseix待3q3uyl(0x5f)&&__TextDecoder?new __TextDecoder().decode(new __Uint8Array($_Yuuseix待8h690l)):typeof __Buffer!==$_Yuuseix待3q3uyl(0x5f)&&__Buffer?__Buffer.from($_Yuuseix待8h690l).toString('utf-8'):utf8ArrayToStr($_Yuuseix待8h690l)}$_Yuuseix待8h690l($_Yuuseix待psg6tc={[$_Yuuseix待3q3uyl(0x91)]:$_Yuuseix待t7xfzk(0x30),[$_Yuuseix待3q3uyl(0x92)]:$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x67))},$_Yuuseix待3iwpf=[$_Yuuseix待t7xfzk(0x2e),$_Yuuseix待t7xfzk(0x6e),$_Yuuseix待t7xfzk(0x6f)],$_Yuuseix待y4ygee=$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x70)),$_Yuuseix待jpxdxs=$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x63)));function $_Yuuseix待tof1wy($_Yuuseix待8h690l,$_Yuuseix待tzlp6d){var $_Yuuseix待t7xfzk=$_Yuuseix待lm52dg($_Yuuseix待8h690l=>{return $_Yuuseix待b3rota[$_Yuuseix待8h690l<0x4a?$_Yuuseix待8h690l>0x4a?$_Yuuseix待8h690l-0x46:$_Yuuseix待8h690l-0xa:$_Yuuseix待8h690l-0x28]},0x1);switch($_Yuuseix待udwv4f){case $_Yuuseix待t7xfzk(0x1b):return-$_Yuuseix待8h690l;case-$_Yuuseix待3q3uyl(0x74):return $_Yuuseix待8h690l+$_Yuuseix待tzlp6d;case $_Yuuseix待3q3uyl(0x60):return $_Yuuseix待8h690l/$_Yuuseix待tzlp6d;case $_Yuuseix待3q3uyl(0x67):return $_Yuuseix待8h690l*$_Yuuseix待tzlp6d;case-$_Yuuseix待3q3uyl(0x88):return $_Yuuseix待8h690l-$_Yuuseix待tzlp6d}}function $_Yuuseix待ru3qmr($_Yuuseix待8h690l){$_Yuuseix待8h690l=$_Yuuseix待udwv4f+($_Yuuseix待udwv4f=$_Yuuseix待8h690l,$_Yuuseix待3q3uyl(0x60));return $_Yuuseix待8h690l}$_Yuuseix待udwv4f=$_Yuuseix待udwv4f;class Snowflake{constructor(){function $_Yuuseix待tzlp6d($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d>0x34?$_Yuuseix待tzlp6d+0x14:$_Yuuseix待tzlp6d>0x34?$_Yuuseix待tzlp6d-0x42:$_Yuuseix待tzlp6d+0xc]}$_Yuuseix待8h690l(this.x=$_Yuuseix待tzlp6d(-0x6),this.y=$_Yuuseix待tzlp6d(-0x6),this.vx=$_Yuuseix待tzlp6d(-0x6),this.vy=$_Yuuseix待tzlp6d(-0x6),this.radius=$_Yuuseix待3q3uyl(0x60),this.alpha=$_Yuuseix待3q3uyl(0x60),this.reset())}[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x60))](){var $_Yuuseix待tzlp6d,__globalObject,__TextDecoder,__Uint8Array,__Buffer;function __String($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d>-0x1e?$_Yuuseix待tzlp6d-0x5d:$_Yuuseix待tzlp6d>-0x5f?$_Yuuseix待tzlp6d>-0x5f?$_Yuuseix待tzlp6d+0x5e:$_Yuuseix待tzlp6d+0x1b:$_Yuuseix待tzlp6d+0x33]}$_Yuuseix待8h690l($_Yuuseix待tzlp6d=(__globalObject,__TextDecoder,__Uint8Array,__Buffer,__String)=>{if(typeof __Buffer===$_Yuuseix待3q3uyl(0x5f)){__Buffer=__Array}if(typeof __String===$_Yuuseix待3q3uyl(0x5f)){__String=$_Yuuseix待jypjlf}if(__Uint8Array==__Buffer){return __TextDecoder?__globalObject[__String[__TextDecoder]]:$_Yuuseix待jypjlf[__globalObject]||(__Uint8Array=__String[__globalObject]||__Buffer,$_Yuuseix待jypjlf[__globalObject]=__Uint8Array($_Yuuseix待pf6qh[__globalObject]))}if(__globalObject!==__TextDecoder){return __String[__globalObject]||(__String[__globalObject]=__Buffer($_Yuuseix待pf6qh[__globalObject]))}if(__Uint8Array==__globalObject){return __TextDecoder[$_Yuuseix待jypjlf[__Uint8Array]]=$_Yuuseix待tzlp6d(__globalObject,__TextDecoder)}if(__Buffer===$_Yuuseix待3q3uyl(0x68)){$_Yuuseix待tzlp6d=__String}if(__TextDecoder){[__String,__TextDecoder]=[__Buffer(__String),__globalObject||__Uint8Array];return $_Yuuseix待tzlp6d(__globalObject,__String,__Uint8Array)}},__globalObject=$_Yuuseix待t7xfzk[__String(-0x4c)]($_Yuuseix待3q3uyl(0x68),$_Yuuseix待3q3uyl(0x6e)),__TextDecoder=$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x69)),__Uint8Array=$_Yuuseix待tzlp6d($_Yuuseix待3q3uyl(0x6d)),__Buffer=$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x69)),this[__String(-0x43)]=this[__Buffer]($_Yuuseix待3q3uyl(0x60),window[__Uint8Array]),this[$_Yuuseix待3q3uyl(0x77)]=this[$_Yuuseix待t7xfzk(__String(-0x4f))]($_Yuuseix待3q3uyl(0x60),$_Yuuseix待tof1wy(window[$_Yuuseix待tzlp6d($_Yuuseix待3q3uyl(0x6a))],$_Yuuseix待ru3qmr(__String(-0x4d)))),this[__String(-0x42)]=this[__TextDecoder]($_Yuuseix待tof1wy(__String(-0x4e),$_Yuuseix待udwv4f=__String(-0x4d)),__String(-0x4e)),this[$_Yuuseix待3q3uyl(0x78)]=this[$_Yuuseix待t7xfzk[$_Yuuseix待3q3uyl(0x6c)]($_Yuuseix待3q3uyl(0x68),$_Yuuseix待3q3uyl(0x69))](__String(-0x4b),$_Yuuseix待3q3uyl(0x6e)),this[$_Yuuseix待tzlp6d[__String(-0x4c)](undefined,__String(-0x49))]=this[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x69))](__String(-0x4f),$_Yuuseix待3q3uyl(0x6f)),this[__globalObject]=this[$_Yuuseix待t7xfzk(__String(-0x4f))](.1,.9));function __Array($_Yuuseix待tzlp6d,__globalObject='DAY3~x$5}pq)?2fTS@*[h0M:sQLE_4wmI"B=CXa>9WrGHb68UJz#dj.]FcR/u;PZg<(vl{nkOoKt+ieV,|!1&`y^7N%',__TextDecoder,__Uint8Array,__Buffer=[],__Array,$_Yuuseix待t7xfzk,utf8ArrayToStr,$_Yuuseix待psg6tc,$_Yuuseix待3iwpf){function $_Yuuseix待y4ygee($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d>-0x54?$_Yuuseix待tzlp6d>-0x13?$_Yuuseix待tzlp6d+0x1d:$_Yuuseix待tzlp6d>-0x13?$_Yuuseix待tzlp6d-0x46:$_Yuuseix待tzlp6d<-0x54?$_Yuuseix待tzlp6d-0x8:$_Yuuseix待tzlp6d+0x53:$_Yuuseix待tzlp6d+0x17]}$_Yuuseix待8h690l(__TextDecoder=''+($_Yuuseix待tzlp6d||''),__Uint8Array=__TextDecoder.length,__Array=__String(-0x58),$_Yuuseix待t7xfzk=$_Yuuseix待3q3uyl(0x60),utf8ArrayToStr=-$_Yuuseix待3q3uyl(0x69));for($_Yuuseix待psg6tc=$_Yuuseix待y4ygee(-0x4d);$_Yuuseix待psg6tc<__Uint8Array;$_Yuuseix待psg6tc++){$_Yuuseix待3iwpf=__globalObject.indexOf(__TextDecoder[$_Yuuseix待psg6tc]);if($_Yuuseix待3iwpf===-$_Yuuseix待y4ygee(-0x44)){continue}if(utf8ArrayToStr<$_Yuuseix待y4ygee(-0x4d)){utf8ArrayToStr=$_Yuuseix待3iwpf}else{function $_Yuuseix待jpxdxs($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d<0x29?$_Yuuseix待tzlp6d-0x14:$_Yuuseix待tzlp6d<0x29?$_Yuuseix待tzlp6d+0x19:$_Yuuseix待tzlp6d-0x2a]}$_Yuuseix待8h690l(utf8ArrayToStr+=$_Yuuseix待3iwpf*__String(-0x39),__Array|=utf8ArrayToStr<<$_Yuuseix待t7xfzk,$_Yuuseix待t7xfzk+=(utf8ArrayToStr&$_Yuuseix待3q3uyl(0x80))>$_Yuuseix待3q3uyl(0x81)?$_Yuuseix待3q3uyl(0x70):$_Yuuseix待3q3uyl(0x7a));do{$_Yuuseix待8h690l(__Buffer.push(__Array&$_Yuuseix待3q3uyl(0x73)),__Array>>=__String(-0x47),$_Yuuseix待t7xfzk-=__String(-0x47))}while($_Yuuseix待t7xfzk>$_Yuuseix待jpxdxs(0x42));utf8ArrayToStr=-__String(-0x4f)}}if(utf8ArrayToStr>-__String(-0x4f)){__Buffer.push((__Array|utf8ArrayToStr<<$_Yuuseix待t7xfzk)&__String(-0x45))}return $_Yuuseix待6bjt94(__Buffer)}}[$_Yuuseix待jpxdxs]($_Yuuseix待8h690l,$_Yuuseix待tzlp6d){var __globalObject;function __TextDecoder($_Yuuseix待8h690l){return $_Yuuseix待b3rota[$_Yuuseix待8h690l<-0x62?$_Yuuseix待8h690l-0x2e:$_Yuuseix待8h690l>-0x21?$_Yuuseix待8h690l+0x4b:$_Yuuseix待8h690l<-0x21?$_Yuuseix待8h690l+0x61:$_Yuuseix待8h690l-0x54]}__globalObject=[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x72))];return $_Yuuseix待tof1wy($_Yuuseix待8h690l,Math[__globalObject[$_Yuuseix待3q3uyl(0x60)]]()*($_Yuuseix待tzlp6d-$_Yuuseix待8h690l),$_Yuuseix待ru3qmr(-__TextDecoder(-0x47)))}[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x71))](){var $_Yuuseix待tzlp6d;function __globalObject($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d<0x27?$_Yuuseix待tzlp6d-0x59:$_Yuuseix待tzlp6d>0x68?$_Yuuseix待tzlp6d-0x23:$_Yuuseix待tzlp6d-0x28]}$_Yuuseix待8h690l($_Yuuseix待tzlp6d=$_Yuuseix待t7xfzk(0x9),this[__globalObject(0x43)]+=this[__globalObject(0x44)],this[__globalObject(0x45)]+=this[$_Yuuseix待3q3uyl(0x78)]);if(this[$_Yuuseix待3q3uyl(0x77)]+this[$_Yuuseix待tzlp6d]>window[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x90))]){this[$_Yuuseix待t7xfzk[__globalObject(0x47)]($_Yuuseix待3q3uyl(0x68),[__globalObject(0x2e)])]()}}}class Snow{constructor(){var $_Yuuseix待tzlp6d;function __globalObject($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d<0x24?$_Yuuseix待tzlp6d<-0x1d?$_Yuuseix待tzlp6d-0x14:$_Yuuseix待tzlp6d<0x24?$_Yuuseix待tzlp6d>-0x1d?$_Yuuseix待tzlp6d+0x1c:$_Yuuseix待tzlp6d+0x2c:$_Yuuseix待tzlp6d+0xf:$_Yuuseix待tzlp6d-0xa]}$_Yuuseix待8h690l($_Yuuseix待tzlp6d=[$_Yuuseix待t7xfzk[$_Yuuseix待3q3uyl(0x6c)](__globalObject(-0xe),$_Yuuseix待3q3uyl(0x65))],this.canvas=document.createElement($_Yuuseix待t7xfzk[$_Yuuseix待3q3uyl(0x79)](__globalObject(-0xe),[0xb])),this.ctx=this.canvas.getContext('2d'),document.body.appendChild(this.canvas),window.addEventListener($_Yuuseix待tzlp6d[$_Yuuseix待3q3uyl(0x60)],()=>this.onResize()),this.onResize(),this.updateBound=this.update.bind(this),requestAnimationFrame(this.updateBound),this.createSnowflakes())}[$_Yuuseix待y4ygee](){var $_Yuuseix待tzlp6d,__globalObject,__TextDecoder;function __Uint8Array($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d>0x58?$_Yuuseix待tzlp6d>0x99?$_Yuuseix待tzlp6d+0x39:$_Yuuseix待tzlp6d<0x58?$_Yuuseix待tzlp6d+0x63:$_Yuuseix待tzlp6d<0x58?$_Yuuseix待tzlp6d-0x62:$_Yuuseix待tzlp6d-0x59:$_Yuuseix待tzlp6d-0x51]}$_Yuuseix待8h690l($_Yuuseix待tzlp6d=(__globalObject,__TextDecoder,__Uint8Array,$_Yuuseix待8h690l,$_Yuuseix待t7xfzk)=>{function __String(__globalObject){return $_Yuuseix待b3rota[__globalObject<0x96?__globalObject>0x55?__globalObject<0x96?__globalObject-0x56:__globalObject+0x7:__globalObject+0x5:__globalObject+0x4f]}if(typeof $_Yuuseix待8h690l===$_Yuuseix待3q3uyl(0x5f)){$_Yuuseix待8h690l=__Buffer}if(typeof $_Yuuseix待t7xfzk===__String(0x5b)){$_Yuuseix待t7xfzk=$_Yuuseix待jypjlf}if(__Uint8Array==__globalObject){return __TextDecoder[$_Yuuseix待jypjlf[__Uint8Array]]=$_Yuuseix待tzlp6d(__globalObject,__TextDecoder)}if(__TextDecoder){[$_Yuuseix待t7xfzk,__TextDecoder]=[$_Yuuseix待8h690l($_Yuuseix待t7xfzk),__globalObject||__Uint8Array];return $_Yuuseix待tzlp6d(__globalObject,$_Yuuseix待t7xfzk,__Uint8Array)}if(__globalObject!==__TextDecoder){return $_Yuuseix待t7xfzk[__globalObject]||($_Yuuseix待t7xfzk[__globalObject]=$_Yuuseix待8h690l($_Yuuseix待pf6qh[__globalObject]))}if($_Yuuseix待8h690l===$_Yuuseix待tzlp6d){__Buffer=__TextDecoder;return __Buffer(__Uint8Array)}},__globalObject={[__Uint8Array(0x7c)]:$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x7a))},__TextDecoder=$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x7b)),this[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x7a))]=window[__TextDecoder],this[$_Yuuseix待tzlp6d(__Uint8Array(0x7d))]=window[$_Yuuseix待t7xfzk(0x11)],this[$_Yuuseix待tzlp6d($_Yuuseix待3q3uyl(0x7c))][__globalObject[$_Yuuseix待3q3uyl(0x7d)]]=this[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x7a))],this[$_Yuuseix待tzlp6d($_Yuuseix待3q3uyl(0x7c))][$_Yuuseix待tzlp6d($_Yuuseix待3q3uyl(0x7e))]=this[$_Yuuseix待tzlp6d(__Uint8Array(0x7d))]);function __Buffer($_Yuuseix待tzlp6d,__globalObject='Nlqt^u`|4W5X7;v,zH=$p)(/!:{P>s8"]oZQ.1rGOyf_FJn[LwY3+jaVU6?E20xD9d*k<heI#MC&@%~}KBibRSAgcTm',__TextDecoder,__Buffer,$_Yuuseix待t7xfzk=[],__String,__Array,utf8ArrayToStr,$_Yuuseix待psg6tc,$_Yuuseix待3iwpf){$_Yuuseix待8h690l(__TextDecoder=''+($_Yuuseix待tzlp6d||''),__Buffer=__TextDecoder.length,__String=$_Yuuseix待3q3uyl(0x60),__Array=__Uint8Array(0x5f),utf8ArrayToStr=-$_Yuuseix待3q3uyl(0x69));for($_Yuuseix待psg6tc=$_Yuuseix待3q3uyl(0x60);$_Yuuseix待psg6tc<__Buffer;$_Yuuseix待psg6tc++){$_Yuuseix待3iwpf=__globalObject.indexOf(__TextDecoder[$_Yuuseix待psg6tc]);if($_Yuuseix待3iwpf===-__Uint8Array(0x68)){continue}if(utf8ArrayToStr<__Uint8Array(0x5f)){utf8ArrayToStr=$_Yuuseix待3iwpf}else{function $_Yuuseix待y4ygee($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d<0x8a?$_Yuuseix待tzlp6d>0x49?$_Yuuseix待tzlp6d-0x4a:$_Yuuseix待tzlp6d+0x2c:$_Yuuseix待tzlp6d-0x3]}$_Yuuseix待8h690l(utf8ArrayToStr+=$_Yuuseix待3iwpf*$_Yuuseix待3q3uyl(0x7f),__String|=utf8ArrayToStr<<__Array,__Array+=(utf8ArrayToStr&__Uint8Array(0x7f))>$_Yuuseix待y4ygee(0x71)?__Uint8Array(0x6f):$_Yuuseix待y4ygee(0x6a));do{$_Yuuseix待8h690l($_Yuuseix待t7xfzk.push(__String&__Uint8Array(0x72)),__String>>=$_Yuuseix待y4ygee(0x61),__Array-=$_Yuuseix待3q3uyl(0x71))}while(__Array>__Uint8Array(0x71));utf8ArrayToStr=-__Uint8Array(0x68)}}if(utf8ArrayToStr>-$_Yuuseix待3q3uyl(0x69)){function $_Yuuseix待jpxdxs($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d<-0x22?$_Yuuseix待tzlp6d+0x62:$_Yuuseix待tzlp6d+0x43]}$_Yuuseix待t7xfzk.push((__String|utf8ArrayToStr<<__Array)&$_Yuuseix待jpxdxs(-0x49))}return $_Yuuseix待6bjt94($_Yuuseix待t7xfzk)}}[$_Yuuseix待t7xfzk(0x13)](){var $_Yuuseix待tzlp6d;function __globalObject($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d>0x10?$_Yuuseix待tzlp6d<0x10?$_Yuuseix待tzlp6d-0x5d:$_Yuuseix待tzlp6d-0x11:$_Yuuseix待tzlp6d-0x22]}$_Yuuseix待tzlp6d=[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x82))];const __TextDecoder=$_Yuuseix待tof1wy(window[$_Yuuseix待t7xfzk(__globalObject(0x4d))],__globalObject(0x26),$_Yuuseix待udwv4f=__globalObject(0x17));this[$_Yuuseix待tzlp6d[$_Yuuseix待3q3uyl(0x60)]]=[];for(let __Uint8Array=__globalObject(0x17);__Uint8Array<__TextDecoder;__Uint8Array++){var __Buffer,__String;function __Array($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d<-0x17?$_Yuuseix待tzlp6d<-0x58?$_Yuuseix待tzlp6d+0x2c:$_Yuuseix待tzlp6d>-0x58?$_Yuuseix待tzlp6d+0x57:$_Yuuseix待tzlp6d-0x46:$_Yuuseix待tzlp6d-0x5d]}$_Yuuseix待8h690l(__Buffer=($_Yuuseix待tzlp6d,__TextDecoder,__Uint8Array,__String,__Array)=>{if(typeof __String===$_Yuuseix待3q3uyl(0x5f)){__String=utf8ArrayToStr}if(typeof __Array===$_Yuuseix待3q3uyl(0x5f)){__Array=$_Yuuseix待jypjlf}if(__String===$_Yuuseix待3q3uyl(0x68)){__Buffer=__Array}if($_Yuuseix待tzlp6d!==__TextDecoder){return __Array[$_Yuuseix待tzlp6d]||(__Array[$_Yuuseix待tzlp6d]=__String($_Yuuseix待pf6qh[$_Yuuseix待tzlp6d]))}if(__String===__Buffer){utf8ArrayToStr=__TextDecoder;return utf8ArrayToStr(__Uint8Array)}if(__Uint8Array&&__String!==utf8ArrayToStr){__Buffer=utf8ArrayToStr;return __Buffer($_Yuuseix待tzlp6d,-__globalObject(0x20),__Uint8Array,__String,__Array)}if(__TextDecoder){[__Array,__TextDecoder]=[__String(__Array),$_Yuuseix待tzlp6d||__Uint8Array];return __Buffer($_Yuuseix待tzlp6d,__Array,__Uint8Array)}},__String=$_Yuuseix待t7xfzk[$_Yuuseix待3q3uyl(0x6c)](__Array(-0x49),0x16),this[$_Yuuseix待t7xfzk(__Array(-0x2f))][__String](new Snowflake));function utf8ArrayToStr($_Yuuseix待tzlp6d,__TextDecoder=':b3R>x+$#AUB/G{LKF.kc%OojYd)64una5lH}71_vy92zE8P]~=Ne@i!*pw(,ZSsDrTV`"tQqJMI&Xh0^;?<fW[g|Cm',__Uint8Array,__Buffer,__String=[],utf8ArrayToStr,$_Yuuseix待t7xfzk,$_Yuuseix待psg6tc,$_Yuuseix待3iwpf,$_Yuuseix待y4ygee){function $_Yuuseix待jpxdxs($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d>-0x30?$_Yuuseix待tzlp6d<0x11?$_Yuuseix待tzlp6d>-0x30?$_Yuuseix待tzlp6d<-0x30?$_Yuuseix待tzlp6d+0x4e:$_Yuuseix待tzlp6d+0x2f:$_Yuuseix待tzlp6d+0x58:$_Yuuseix待tzlp6d-0x27:$_Yuuseix待tzlp6d+0x30]}$_Yuuseix待8h690l(__Uint8Array=''+($_Yuuseix待tzlp6d||''),__Buffer=__Uint8Array.length,utf8ArrayToStr=$_Yuuseix待jpxdxs(-0x29),$_Yuuseix待t7xfzk=$_Yuuseix待3q3uyl(0x60),$_Yuuseix待psg6tc=-$_Yuuseix待3q3uyl(0x69));for($_Yuuseix待3iwpf=__Array(-0x51);$_Yuuseix待3iwpf<__Buffer;$_Yuuseix待3iwpf++){function $_Yuuseix待udwv4f($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d>0xb?$_Yuuseix待tzlp6d>0x4c?$_Yuuseix待tzlp6d+0x57:$_Yuuseix待tzlp6d-0xc:$_Yuuseix待tzlp6d+0x1c]}$_Yuuseix待y4ygee=__TextDecoder.indexOf(__Uint8Array[$_Yuuseix待3iwpf]);if($_Yuuseix待y4ygee===-__Array(-0x48)){continue}if($_Yuuseix待psg6tc<$_Yuuseix待udwv4f(0x12)){$_Yuuseix待psg6tc=$_Yuuseix待y4ygee}else{$_Yuuseix待8h690l($_Yuuseix待psg6tc+=$_Yuuseix待y4ygee*__Array(-0x32),utf8ArrayToStr|=$_Yuuseix待psg6tc<<$_Yuuseix待t7xfzk,$_Yuuseix待t7xfzk+=($_Yuuseix待psg6tc&$_Yuuseix待jpxdxs(-0x9))>$_Yuuseix待jpxdxs(-0x8)?$_Yuuseix待udwv4f(0x22):__globalObject(0x31));do{$_Yuuseix待8h690l(__String.push(utf8ArrayToStr&$_Yuuseix待udwv4f(0x25)),utf8ArrayToStr>>=$_Yuuseix待jpxdxs(-0x18),$_Yuuseix待t7xfzk-=$_Yuuseix待jpxdxs(-0x18))}while($_Yuuseix待t7xfzk>__Array(-0x3f));$_Yuuseix待psg6tc=-__globalObject(0x20)}}if($_Yuuseix待psg6tc>-$_Yuuseix待jpxdxs(-0x20)){function xyz_($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d<-0x22?$_Yuuseix待tzlp6d+0x1a:$_Yuuseix待tzlp6d>0x1f?$_Yuuseix待tzlp6d-0x57:$_Yuuseix待tzlp6d<0x1f?$_Yuuseix待tzlp6d+0x21:$_Yuuseix待tzlp6d+0x5e]}__String.push((utf8ArrayToStr|$_Yuuseix待psg6tc<<$_Yuuseix待t7xfzk)&xyz_(-0x8))}return $_Yuuseix待6bjt94(__String)}}}[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x71))](){var $_Yuuseix待tzlp6d,__globalObject;function __TextDecoder($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d>-0x7?$_Yuuseix待tzlp6d>-0x7?$_Yuuseix待tzlp6d<-0x7?$_Yuuseix待tzlp6d+0x47:$_Yuuseix待tzlp6d>-0x7?$_Yuuseix待tzlp6d+0x6:$_Yuuseix待tzlp6d+0x54:$_Yuuseix待tzlp6d-0x1d:$_Yuuseix待tzlp6d+0x33]}$_Yuuseix待8h690l($_Yuuseix待tzlp6d=(__globalObject,__TextDecoder,__Uint8Array,__Buffer,__String)=>{if(typeof __Buffer===$_Yuuseix待3q3uyl(0x5f)){__Buffer=$_Yuuseix待3iwpf}if(typeof __String===$_Yuuseix待3q3uyl(0x5f)){__String=$_Yuuseix待jypjlf}if(__Uint8Array==__Buffer){return __TextDecoder?__globalObject[__String[__TextDecoder]]:$_Yuuseix待jypjlf[__globalObject]||(__Uint8Array=__String[__globalObject]||__Buffer,$_Yuuseix待jypjlf[__globalObject]=__Uint8Array($_Yuuseix待pf6qh[__globalObject]))}if(__globalObject!==__TextDecoder){return __String[__globalObject]||(__String[__globalObject]=__Buffer($_Yuuseix待pf6qh[__globalObject]))}if(__Buffer===$_Yuuseix待3q3uyl(0x68)){$_Yuuseix待tzlp6d=__String}if(__TextDecoder){[__String,__TextDecoder]=[__Buffer(__String),__globalObject||__Uint8Array];return $_Yuuseix待tzlp6d(__globalObject,__String,__Uint8Array)}if(__Uint8Array==__globalObject){return __TextDecoder[$_Yuuseix待jypjlf[__Uint8Array]]=$_Yuuseix待tzlp6d(__globalObject,__TextDecoder)}},__globalObject={[__TextDecoder(0x23)]:$_Yuuseix待t7xfzk[$_Yuuseix待3q3uyl(0x6c)]($_Yuuseix待3q3uyl(0x68),$_Yuuseix待3q3uyl(0x8d)),[$_Yuuseix待3q3uyl(0x84)]:$_Yuuseix待tzlp6d(0x1b)},this[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x85))][__globalObject[$_Yuuseix待3q3uyl(0x83)]]($_Yuuseix待3q3uyl(0x60),$_Yuuseix待3q3uyl(0x60),this[$_Yuuseix待t7xfzk(0x19)],this[$_Yuuseix待tzlp6d($_Yuuseix待3q3uyl(0x6b))]));for(let __Uint8Array of this[__globalObject[$_Yuuseix待3q3uyl(0x84)]]){var __Buffer,__String,__Array,utf8ArrayToStr;function $_Yuuseix待psg6tc($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d>0x30?$_Yuuseix待tzlp6d-0x31:$_Yuuseix待tzlp6d+0x33]}$_Yuuseix待8h690l(__Buffer={[__TextDecoder(0x27)]:$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x85))},__String=$_Yuuseix待t7xfzk(0x25),__Array=$_Yuuseix待t7xfzk(__TextDecoder(0x25)),utf8ArrayToStr=[$_Yuuseix待t7xfzk($_Yuuseix待psg6tc(0x5c)),$_Yuuseix待t7xfzk($_Yuuseix待psg6tc(0x5c)),$_Yuuseix待tzlp6d(0x20),$_Yuuseix待tzlp6d(0x22),$_Yuuseix待tzlp6d(0x23),$_Yuuseix待tzlp6d(0x26)],__Uint8Array[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x71))](),this[$_Yuuseix待t7xfzk($_Yuuseix待psg6tc(0x5c))][$_Yuuseix待t7xfzk($_Yuuseix待psg6tc(0x4b))](),this[utf8ArrayToStr[__TextDecoder(0x0)]][$_Yuuseix待tzlp6d(0x1d)]=$_Yuuseix待t7xfzk(0x1e),this[utf8ArrayToStr[$_Yuuseix待3q3uyl(0x69)]][$_Yuuseix待t7xfzk[$_Yuuseix待psg6tc(0x43)]($_Yuuseix待psg6tc(0x3f),$_Yuuseix待3q3uyl(0x86))](),this[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x85))][utf8ArrayToStr[$_Yuuseix待psg6tc(0x44)]](__Uint8Array[$_Yuuseix待psg6tc(0x4c)],__Uint8Array[$_Yuuseix待psg6tc(0x4e)],__Uint8Array[$_Yuuseix待t7xfzk(0x21)],$_Yuuseix待psg6tc(0x37),$_Yuuseix待tof1wy(Math.PI,$_Yuuseix待3q3uyl(0x6d),$_Yuuseix待udwv4f=__TextDecoder(0x7))),this[__Array][utf8ArrayToStr[$_Yuuseix待psg6tc(0x41)]](),this[$_Yuuseix待t7xfzk[__TextDecoder(0xc)](undefined,__TextDecoder(0x25))][utf8ArrayToStr[$_Yuuseix待3q3uyl(0x6f)]]=__Uint8Array[$_Yuuseix待tzlp6d(0x24)],this[$_Yuuseix待t7xfzk($_Yuuseix待psg6tc(0x5c))][__String](),this[__Buffer[$_Yuuseix待3q3uyl(0x87)]][utf8ArrayToStr[__TextDecoder(0xe)]]())}requestAnimationFrame(this[$_Yuuseix待t7xfzk(0x27)]);function $_Yuuseix待3iwpf($_Yuuseix待tzlp6d,__globalObject='@dfGoZ!:EBbze;}vyA>3KXkSj^J1uVW#R`T6YPl<Oi(?NqIsw[9M4t,x.mnH{/7=c*a2F)p&8gQ|_L0rC$+%U~"hD5]',__Uint8Array,__Buffer,__String=[],__Array,utf8ArrayToStr,$_Yuuseix待psg6tc,$_Yuuseix待3iwpf,$_Yuuseix待t7xfzk){$_Yuuseix待8h690l(__Uint8Array=''+($_Yuuseix待tzlp6d||''),__Buffer=__Uint8Array.length,__Array=$_Yuuseix待3q3uyl(0x60),utf8ArrayToStr=$_Yuuseix待3q3uyl(0x60),$_Yuuseix待psg6tc=-$_Yuuseix待3q3uyl(0x69));for($_Yuuseix待3iwpf=__TextDecoder(0x0);$_Yuuseix待3iwpf<__Buffer;$_Yuuseix待3iwpf++){$_Yuuseix待t7xfzk=__globalObject.indexOf(__Uint8Array[$_Yuuseix待3iwpf]);if($_Yuuseix待t7xfzk===-__TextDecoder(0x9)){continue}if($_Yuuseix待psg6tc<$_Yuuseix待3q3uyl(0x60)){$_Yuuseix待psg6tc=$_Yuuseix待t7xfzk}else{function $_Yuuseix待y4ygee($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d>-0x2d?$_Yuuseix待tzlp6d<0x14?$_Yuuseix待tzlp6d+0x2c:$_Yuuseix待tzlp6d-0xa:$_Yuuseix待tzlp6d-0xe]}$_Yuuseix待8h690l($_Yuuseix待psg6tc+=$_Yuuseix待t7xfzk*$_Yuuseix待3q3uyl(0x7f),__Array|=$_Yuuseix待psg6tc<<utf8ArrayToStr,utf8ArrayToStr+=($_Yuuseix待psg6tc&$_Yuuseix待3q3uyl(0x80))>__TextDecoder(0x21)?$_Yuuseix待y4ygee(-0x16):$_Yuuseix待y4ygee(-0xc));do{$_Yuuseix待8h690l(__String.push(__Array&$_Yuuseix待3q3uyl(0x73)),__Array>>=$_Yuuseix待y4ygee(-0x15),utf8ArrayToStr-=$_Yuuseix待y4ygee(-0x15))}while(utf8ArrayToStr>$_Yuuseix待3q3uyl(0x72));$_Yuuseix待psg6tc=-$_Yuuseix待y4ygee(-0x1d)}}if($_Yuuseix待psg6tc>-__TextDecoder(0x9)){function $_Yuuseix待jpxdxs($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d<-0x52?$_Yuuseix待tzlp6d+0xe:$_Yuuseix待tzlp6d>-0x52?$_Yuuseix待tzlp6d+0x51:$_Yuuseix待tzlp6d+0x64]}__String.push((__Array|$_Yuuseix待psg6tc<<utf8ArrayToStr)&$_Yuuseix待jpxdxs(-0x38))}return $_Yuuseix待6bjt94(__String)}}}new Snow;const comingdate=new Date($_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x88))),d=document[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x89))]('d'),h=document[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x89))]('h'),m=document[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x89))]('m'),s=document[$_Yuuseix待t7xfzk[$_Yuuseix待3q3uyl(0x6c)]($_Yuuseix待3q3uyl(0x68),$_Yuuseix待3q3uyl(0x89))]('s'),countdown=setInterval(()=>{var $_Yuuseix待tzlp6d,__globalObject;function __TextDecoder($_Yuuseix待tzlp6d){return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d<0x94?$_Yuuseix待tzlp6d<0x94?$_Yuuseix待tzlp6d<0x94?$_Yuuseix待tzlp6d>0x53?$_Yuuseix待tzlp6d-0x54:$_Yuuseix待tzlp6d+0x34:$_Yuuseix待tzlp6d-0x4d:$_Yuuseix待tzlp6d-0x1a:$_Yuuseix待tzlp6d+0xc]}$_Yuuseix待8h690l($_Yuuseix待tzlp6d=(__globalObject,__TextDecoder,__Uint8Array,__Buffer,__String)=>{var __Array=$_Yuuseix待lm52dg(__globalObject=>{return $_Yuuseix待b3rota[__globalObject<0x13?__globalObject+0x5e:__globalObject<0x13?__globalObject+0x56:__globalObject-0x14]},0x1);if(typeof __Buffer===$_Yuuseix待3q3uyl(0x5f)){__Buffer=$_Yuuseix待3iwpf}if(typeof __String===__Array(0x19)){__String=$_Yuuseix待jypjlf}if(__globalObject!==__TextDecoder){return __String[__globalObject]||(__String[__globalObject]=__Buffer($_Yuuseix待pf6qh[__globalObject]))}if(__Buffer===$_Yuuseix待3q3uyl(0x68)){$_Yuuseix待tzlp6d=__String}},__globalObject=[$_Yuuseix待tzlp6d($_Yuuseix待3q3uyl(0x8b))]);const __Uint8Array=new Date,__Buffer=$_Yuuseix待tof1wy(comingdate[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x8a))](),__Uint8Array[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x8a))](),$_Yuuseix待ru3qmr(-$_Yuuseix待3q3uyl(0x88))),__String=Math[$_Yuuseix待tzlp6d[$_Yuuseix待3q3uyl(0x79)]($_Yuuseix待3q3uyl(0x68),[$_Yuuseix待3q3uyl(0x8b)])]($_Yuuseix待tof1wy(__Buffer,$_Yuuseix待3q3uyl(0x8e)*$_Yuuseix待3q3uyl(0x8c)*$_Yuuseix待3q3uyl(0x8c)*$_Yuuseix待3q3uyl(0x8d),$_Yuuseix待udwv4f=$_Yuuseix待3q3uyl(0x60))),__Array=Math[$_Yuuseix待tzlp6d($_Yuuseix待3q3uyl(0x8b))]($_Yuuseix待tof1wy(__Buffer%(__TextDecoder(0x88)*$_Yuuseix待3q3uyl(0x8c)*__TextDecoder(0x86)*__TextDecoder(0x87)),__TextDecoder(0x88)*$_Yuuseix待3q3uyl(0x8c)*$_Yuuseix待3q3uyl(0x8c),$_Yuuseix待udwv4f=__TextDecoder(0x5a))),utf8ArrayToStr=Math[__globalObject[$_Yuuseix待3q3uyl(0x60)]]($_Yuuseix待tof1wy(__Buffer%(__TextDecoder(0x88)*__TextDecoder(0x86)*__TextDecoder(0x86)),__TextDecoder(0x88)*__TextDecoder(0x86),$_Yuuseix待ru3qmr(__TextDecoder(0x5a)))),$_Yuuseix待psg6tc=Math[$_Yuuseix待tzlp6d(__TextDecoder(0x85))]($_Yuuseix待tof1wy(__Buffer%(__TextDecoder(0x88)*$_Yuuseix待3q3uyl(0x8c)),__TextDecoder(0x88),$_Yuuseix待ru3qmr($_Yuuseix待3q3uyl(0x60))));$_Yuuseix待8h690l(d[$_Yuuseix待tzlp6d($_Yuuseix待3q3uyl(0x8f))]=getTrueNumber(__String),h[$_Yuuseix待tzlp6d(__TextDecoder(0x89))]=getTrueNumber(__Array),m[$_Yuuseix待tzlp6d($_Yuuseix待3q3uyl(0x8f))]=getTrueNumber(utf8ArrayToStr),s[$_Yuuseix待tzlp6d($_Yuuseix待3q3uyl(0x8f))]=getTrueNumber($_Yuuseix待psg6tc));function $_Yuuseix待3iwpf($_Yuuseix待tzlp6d,__globalObject='uLGk1Bp%R2(IKfas|A_NXDgq+i[vFzx79h/$`>?wE^=HC8mO#&"W;J*5.nytUj)QZ6S3VP{TMY}ob:c4,~re<0@]dl!',__Uint8Array,__Buffer,__String=[],__Array,utf8ArrayToStr,$_Yuuseix待psg6tc,$_Yuuseix待3iwpf,$_Yuuseix待t7xfzk){var $_Yuuseix待y4ygee=$_Yuuseix待lm52dg($_Yuuseix待tzlp6d=>{return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d<-0x62?$_Yuuseix待tzlp6d+0x18:$_Yuuseix待tzlp6d>-0x62?$_Yuuseix待tzlp6d<-0x62?$_Yuuseix待tzlp6d-0x7:$_Yuuseix待tzlp6d+0x61:$_Yuuseix待tzlp6d+0x34]},0x1);$_Yuuseix待8h690l(__Uint8Array=''+($_Yuuseix待tzlp6d||''),__Buffer=__Uint8Array.length,__Array=$_Yuuseix待3q3uyl(0x60),utf8ArrayToStr=__TextDecoder(0x5a),$_Yuuseix待psg6tc=-__TextDecoder(0x63));for($_Yuuseix待3iwpf=$_Yuuseix待y4ygee(-0x5b);$_Yuuseix待3iwpf<__Buffer;$_Yuuseix待3iwpf++){var $_Yuuseix待jpxdxs=$_Yuuseix待lm52dg($_Yuuseix待tzlp6d=>{return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d<0x2e?$_Yuuseix待tzlp6d<-0x13?$_Yuuseix待tzlp6d+0xe:$_Yuuseix待tzlp6d>-0x13?$_Yuuseix待tzlp6d<-0x13?$_Yuuseix待tzlp6d-0x5f:$_Yuuseix待tzlp6d+0x12:$_Yuuseix待tzlp6d+0x5f:$_Yuuseix待tzlp6d-0x4a]},0x1);$_Yuuseix待t7xfzk=__globalObject.indexOf(__Uint8Array[$_Yuuseix待3iwpf]);if($_Yuuseix待t7xfzk===-$_Yuuseix待3q3uyl(0x69)){continue}if($_Yuuseix待psg6tc<$_Yuuseix待jpxdxs(-0xc)){$_Yuuseix待psg6tc=$_Yuuseix待t7xfzk}else{var $_Yuuseix待udwv4f=$_Yuuseix待lm52dg($_Yuuseix待tzlp6d=>{return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d<-0x24?$_Yuuseix待tzlp6d+0x4d:$_Yuuseix待tzlp6d>-0x24?$_Yuuseix待tzlp6d>-0x24?$_Yuuseix待tzlp6d+0x23:$_Yuuseix待tzlp6d+0x1a:$_Yuuseix待tzlp6d+0x19]},0x1);$_Yuuseix待8h690l($_Yuuseix待psg6tc+=$_Yuuseix待t7xfzk*$_Yuuseix待3q3uyl(0x7f),__Array|=$_Yuuseix待psg6tc<<utf8ArrayToStr,utf8ArrayToStr+=($_Yuuseix待psg6tc&$_Yuuseix待udwv4f(0x3))>$_Yuuseix待jpxdxs(0x15)?$_Yuuseix待udwv4f(-0xd):$_Yuuseix待udwv4f(-0x3));do{$_Yuuseix待8h690l(__String.push(__Array&$_Yuuseix待udwv4f(-0xa)),__Array>>=$_Yuuseix待udwv4f(-0xc),utf8ArrayToStr-=$_Yuuseix待3q3uyl(0x71))}while(utf8ArrayToStr>$_Yuuseix待udwv4f(-0xb));$_Yuuseix待psg6tc=-__TextDecoder(0x63)}}if($_Yuuseix待psg6tc>-$_Yuuseix待y4ygee(-0x52)){__String.push((__Array|$_Yuuseix待psg6tc<<utf8ArrayToStr)&$_Yuuseix待3q3uyl(0x73))}return $_Yuuseix待6bjt94(__String)}},$_Yuuseix待3q3uyl(0x8e)),getTrueNumber=$_Yuuseix待8h690l=>$_Yuuseix待8h690l<$_Yuuseix待3q3uyl(0x90)?$_Yuuseix待tof1wy('0',$_Yuuseix待8h690l,$_Yuuseix待ru3qmr(-$_Yuuseix待3q3uyl(0x74))):$_Yuuseix待8h690l;$_Yuuseix待8h690l(xyz_=$_Yuuseix待3q3uyl(0x60),colors=[$_Yuuseix待t7xfzk(0x2d),$_Yuuseix待3iwpf[$_Yuuseix待3q3uyl(0x60)],$_Yuuseix待t7xfzk(0x2f),$_Yuuseix待psg6tc[$_Yuuseix待3q3uyl(0x91)],$_Yuuseix待t7xfzk(0x31),$_Yuuseix待t7xfzk(0x32),$_Yuuseix待psg6tc[$_Yuuseix待3q3uyl(0x92)],$_Yuuseix待t7xfzk(0x34),$_Yuuseix待t7xfzk(0x35),$_Yuuseix待t7xfzk(0x36),$_Yuuseix待t7xfzk(0x37),$_Yuuseix待t7xfzk(0x38)],jQuery(document)[$_Yuuseix待t7xfzk(0x39)]($_Yuuseix待lm52dg($_Yuuseix待tzlp6d=>{$_Yuuseix待tzlp6d($_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x98)))[$_Yuuseix待t7xfzk(0x3b)]($_Yuuseix待lm52dg(__globalObject=>{var __TextDecoder,__Uint8Array,__Buffer,__String,__Array,utf8ArrayToStr,$_Yuuseix待psg6tc,$_Yuuseix待3iwpf,$_Yuuseix待y4ygee,$_Yuuseix待jpxdxs,$_Yuuseix待1ad9a,$_Yuuseix待4yezmp,$_Yuuseix待magg3j;function $_Yuuseix待4ifwx(__globalObject){return $_Yuuseix待b3rota[__globalObject>0x7c?__globalObject-0x5a:__globalObject>0x3b?__globalObject>0x7c?__globalObject+0x17:__globalObject>0x3b?__globalObject-0x3c:__globalObject-0x17:__globalObject+0x12]}$_Yuuseix待8h690l(__TextDecoder=(__globalObject,__Uint8Array,__Buffer,__String,__Array)=>{if(typeof __String===$_Yuuseix待3q3uyl(0x5f)){__String=$_Yuuseix待g8y4v3d}if(typeof __Array===$_Yuuseix待3q3uyl(0x5f)){__Array=$_Yuuseix待jypjlf}if(__Buffer==__globalObject){return __Uint8Array[$_Yuuseix待jypjlf[__Buffer]]=__TextDecoder(__globalObject,__Uint8Array)}if(__Uint8Array){[__Array,__Uint8Array]=[__String(__Array),__globalObject||__Buffer];return __TextDecoder(__globalObject,__Array,__Buffer)}if(__globalObject!==__Uint8Array){return __Array[__globalObject]||(__Array[__globalObject]=__String($_Yuuseix待pf6qh[__globalObject]))}if(__String===__TextDecoder){$_Yuuseix待g8y4v3d=__Uint8Array;return $_Yuuseix待g8y4v3d(__Buffer)}if(__Buffer==__String){return __Uint8Array?__globalObject[__Array[__Uint8Array]]:$_Yuuseix待jypjlf[__globalObject]||(__Buffer=__Array[__globalObject]||__String,$_Yuuseix待jypjlf[__globalObject]=__Buffer($_Yuuseix待pf6qh[__globalObject]))}},__Uint8Array=$_Yuuseix待t7xfzk(0x65),__Buffer=[$_Yuuseix待t7xfzk[$_Yuuseix待3q3uyl(0x6c)]($_Yuuseix待3q3uyl(0x68),0x59),$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x7f)),$_Yuuseix待t7xfzk(0x60)],__String={[$_Yuuseix待3q3uyl(0x93)]:$_Yuuseix待t7xfzk(0x3d),[$_Yuuseix待4ifwx(0x76)]:$_Yuuseix待t7xfzk(0x46),[$_Yuuseix待3q3uyl(0x95)]:$_Yuuseix待t7xfzk(0x4d),[$_Yuuseix待4ifwx(0x79)]:$_Yuuseix待t7xfzk(0x63)},__Array=new Array($_Yuuseix待t7xfzk($_Yuuseix待4ifwx(0x6e)),__String[$_Yuuseix待3q3uyl(0x93)],$_Yuuseix待t7xfzk[$_Yuuseix待4ifwx(0x5b)]($_Yuuseix待3q3uyl(0x68),[0x3e]),$_Yuuseix待t7xfzk[$_Yuuseix待4ifwx(0x4e)]($_Yuuseix待3q3uyl(0x68),$_Yuuseix待4ifwx(0x44)),$_Yuuseix待t7xfzk(0x40),$_Yuuseix待t7xfzk[$_Yuuseix待3q3uyl(0x79)]($_Yuuseix待4ifwx(0x4a),[0x41]),$_Yuuseix待t7xfzk[$_Yuuseix待3q3uyl(0x6c)]($_Yuuseix待4ifwx(0x4a),0x42),$_Yuuseix待t7xfzk[$_Yuuseix待4ifwx(0x5b)]($_Yuuseix待3q3uyl(0x68),[0x43]),$_Yuuseix待t7xfzk(0x44),$_Yuuseix待t7xfzk(0x45),__String[$_Yuuseix待4ifwx(0x76)],$_Yuuseix待t7xfzk(0x47),$_Yuuseix待t7xfzk(0x48),$_Yuuseix待t7xfzk[$_Yuuseix待3q3uyl(0x79)]($_Yuuseix待3q3uyl(0x68),[0x49]),$_Yuuseix待t7xfzk[$_Yuuseix待4ifwx(0x5b)]($_Yuuseix待3q3uyl(0x68),[0x4a]),$_Yuuseix待t7xfzk(0x4b),$_Yuuseix待t7xfzk(0x4c),__String[$_Yuuseix待4ifwx(0x77)],$_Yuuseix待t7xfzk(0x4e),$_Yuuseix待t7xfzk(0x4f),$_Yuuseix待t7xfzk[$_Yuuseix待4ifwx(0x4e)]($_Yuuseix待4ifwx(0x4a),0x50),$_Yuuseix待t7xfzk(0x51),$_Yuuseix待t7xfzk(0x52),$_Yuuseix待t7xfzk(0x53),$_Yuuseix待t7xfzk(0x54),$_Yuuseix待t7xfzk(0x55),$_Yuuseix待t7xfzk(0x56),$_Yuuseix待t7xfzk(0x57)),utf8ArrayToStr=$_Yuuseix待tzlp6d($_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x81))).text(__Array[xyz_]),$_Yuuseix待psg6tc=colors[Math.floor($_Yuuseix待tof1wy(Math.random(),colors.length,$_Yuuseix待ru3qmr($_Yuuseix待4ifwx(0x49))))],xyz_=(xyz_+$_Yuuseix待4ifwx(0x4b))%__Array[__Buffer[$_Yuuseix待3q3uyl(0x60)]],$_Yuuseix待3iwpf=__globalObject[$_Yuuseix待t7xfzk(0x5a)],$_Yuuseix待y4ygee=__globalObject.pageY,$_Yuuseix待jpxdxs=$_Yuuseix待tof1wy(Math.floor(0x986f71*Math.random()),0x270f,$_Yuuseix待udwv4f=-$_Yuuseix待3q3uyl(0x74)),$_Yuuseix待1ad9a=$_Yuuseix待tof1wy($_Yuuseix待y4ygee,$_Yuuseix待3q3uyl(0x96),$_Yuuseix待udwv4f=-$_Yuuseix待3q3uyl(0x88)),$_Yuuseix待4yezmp=$_Yuuseix待3iwpf,$_Yuuseix待magg3j=$_Yuuseix待psg6tc,utf8ArrayToStr[__Buffer[$_Yuuseix待3q3uyl(0x69)]]({[$_Yuuseix待t7xfzk(0x5c)]:$_Yuuseix待jpxdxs,[$_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x99))]:$_Yuuseix待1ad9a,[$_Yuuseix待t7xfzk(0x5e)]:$_Yuuseix待4yezmp,[$_Yuuseix待t7xfzk[$_Yuuseix待3q3uyl(0x79)]($_Yuuseix待3q3uyl(0x68),[0x5f])]:__Buffer[$_Yuuseix待3q3uyl(0x6d)],[$_Yuuseix待t7xfzk(0x61)]:$_Yuuseix待t7xfzk(0x62),[__String[$_Yuuseix待4ifwx(0x79)]]:$_Yuuseix待magg3j}),$_Yuuseix待tzlp6d($_Yuuseix待t7xfzk($_Yuuseix待3q3uyl(0x98)))[$_Yuuseix待t7xfzk(0x64)](utf8ArrayToStr),utf8ArrayToStr[__Uint8Array]({[$_Yuuseix待t7xfzk($_Yuuseix待4ifwx(0x7b))]:$_Yuuseix待tof1wy($_Yuuseix待y4ygee,0xb4,$_Yuuseix待udwv4f=-$_Yuuseix待4ifwx(0x6a)),[__TextDecoder(0x66)]:$_Yuuseix待3q3uyl(0x60)},0x5dc,$_Yuuseix待lm52dg(()=>{utf8ArrayToStr[__TextDecoder[$_Yuuseix待4ifwx(0x4e)]($_Yuuseix待4ifwx(0x4a),0x67)]()})));function $_Yuuseix待g8y4v3d(__globalObject,__TextDecoder='Qd}7y<,u%>[z|:H0]DE"/8S`NZK_k*J#L(Oh4TWIY@gA{Pqpb3RsU2V;6vnGelj1x!m&+XFfr=a~B5MC9)otc?i.$^w',__Uint8Array,__Buffer,__String=[],__Array,utf8ArrayToStr,$_Yuuseix待3iwpf,$_Yuuseix待y4ygee,$_Yuuseix待1ad9a){$_Yuuseix待8h690l(__Uint8Array=''+(__globalObject||''),__Buffer=__Uint8Array.length,__Array=$_Yuuseix待3q3uyl(0x60),utf8ArrayToStr=$_Yuuseix待3q3uyl(0x60),$_Yuuseix待3iwpf=-$_Yuuseix待4ifwx(0x4b));for($_Yuuseix待y4ygee=$_Yuuseix待4ifwx(0x42);$_Yuuseix待y4ygee<__Buffer;$_Yuuseix待y4ygee++){$_Yuuseix待1ad9a=__TextDecoder.indexOf(__Uint8Array[$_Yuuseix待y4ygee]);if($_Yuuseix待1ad9a===-$_Yuuseix待3q3uyl(0x69)){continue}if($_Yuuseix待3iwpf<$_Yuuseix待4ifwx(0x42)){$_Yuuseix待3iwpf=$_Yuuseix待1ad9a}else{$_Yuuseix待8h690l($_Yuuseix待3iwpf+=$_Yuuseix待1ad9a*$_Yuuseix待4ifwx(0x61),__Array|=$_Yuuseix待3iwpf<<utf8ArrayToStr,utf8ArrayToStr+=($_Yuuseix待3iwpf&$_Yuuseix待3q3uyl(0x80))>$_Yuuseix待3q3uyl(0x81)?$_Yuuseix待3q3uyl(0x70):$_Yuuseix待3q3uyl(0x7a));do{$_Yuuseix待8h690l(__String.push(__Array&$_Yuuseix待3q3uyl(0x73)),__Array>>=$_Yuuseix待3q3uyl(0x71),utf8ArrayToStr-=$_Yuuseix待4ifwx(0x53))}while(utf8ArrayToStr>$_Yuuseix待3q3uyl(0x72));$_Yuuseix待3iwpf=-$_Yuuseix待4ifwx(0x4b)}}if($_Yuuseix待3iwpf>-$_Yuuseix待4ifwx(0x4b)){__String.push((__Array|$_Yuuseix待3iwpf<<utf8ArrayToStr)&$_Yuuseix待3q3uyl(0x73))}return $_Yuuseix待6bjt94(__String)}},0x1))},0x1)),console[$_Yuuseix待t7xfzk[$_Yuuseix待3q3uyl(0x79)]($_Yuuseix待3q3uyl(0x68),[0x68])](),console[$_Yuuseix待t7xfzk(0x69)](`Yuusei`,$_Yuuseix待t7xfzk(0x6a),$_Yuuseix待t7xfzk[$_Yuuseix待3q3uyl(0x6c)]($_Yuuseix待3q3uyl(0x68),0x6b)));function $_Yuuseix待1vhqoq($_Yuuseix待tzlp6d,$_Yuuseix待t7xfzk='qeb8<u5DL`Hhd}C$ijzPlNx;6gfk{+%,G#]m~3(9|cEM/1."4nv>^FO0:Z?o!yBp72)VrR_W*&wA@=[JYsKQaSXtTUI',__globalObject,__TextDecoder,__Uint8Array=[],__Buffer,__String,__Array,utf8ArrayToStr,$_Yuuseix待psg6tc){var $_Yuuseix待3iwpf=$_Yuuseix待lm52dg($_Yuuseix待tzlp6d=>{return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d<-0x5d?$_Yuuseix待tzlp6d-0xd:$_Yuuseix待tzlp6d+0x5c]},0x1);$_Yuuseix待8h690l(__globalObject=''+($_Yuuseix待tzlp6d||''),__TextDecoder=__globalObject.length,__Buffer=$_Yuuseix待3iwpf(-0x56),__String=$_Yuuseix待3q3uyl(0x60),__Array=-$_Yuuseix待3q3uyl(0x69));for(utf8ArrayToStr=$_Yuuseix待3q3uyl(0x60);utf8ArrayToStr<__TextDecoder;utf8ArrayToStr++){$_Yuuseix待psg6tc=$_Yuuseix待t7xfzk.indexOf(__globalObject[utf8ArrayToStr]);if($_Yuuseix待psg6tc===-$_Yuuseix待3q3uyl(0x69)){continue}if(__Array<$_Yuuseix待3iwpf(-0x56)){__Array=$_Yuuseix待psg6tc}else{var $_Yuuseix待y4ygee=$_Yuuseix待lm52dg($_Yuuseix待tzlp6d=>{return $_Yuuseix待b3rota[$_Yuuseix待tzlp6d>0x5a?$_Yuuseix待tzlp6d-0x5b:$_Yuuseix待tzlp6d+0x2e]},0x1);$_Yuuseix待8h690l(__Array+=$_Yuuseix待psg6tc*$_Yuuseix待3iwpf(-0x37),__Buffer|=__Array<<__String,__String+=(__Array&$_Yuuseix待3q3uyl(0x80))>$_Yuuseix待3q3uyl(0x81)?$_Yuuseix待3iwpf(-0x46):$_Yuuseix待y4ygee(0x7b));do{$_Yuuseix待8h690l(__Uint8Array.push(__Buffer&$_Yuuseix待y4ygee(0x74)),__Buffer>>=$_Yuuseix待3q3uyl(0x71),__String-=$_Yuuseix待y4ygee(0x72))}while(__String>$_Yuuseix待3iwpf(-0x44));__Array=-$_Yuuseix待3q3uyl(0x69)}}if(__Array>-$_Yuuseix待3iwpf(-0x4d)){__Uint8Array.push((__Buffer|__Array<<__String)&$_Yuuseix待3q3uyl(0x73))}return $_Yuuseix待6bjt94(__Uint8Array)}function $_Yuuseix待9mvjh9(){return['5<7`p.)6e)O^=<','n|PGcY2+npA:Hu','n|PGcYv^ojK:e','ZfALE&q','5<%,^K4b','undefined',0x0,'length',0x3f,0x6,'fromCodePoint',0xc,'push',0x33,void 0x0,0x1,0x3,0x1a,'call',0x2,0x5,0x4,0xd,0x8,0x7,0xff,0x1c,'x','vx','y','vy','apply',0xe,0xf,0x12,'$_Yuuseix待qbkn5p',0x10,0x5b,0x1fff,0x58,0x15,'$_Yuuseix待h7pggd','$_Yuuseix待nwwvhv',0x17,0x1f,'$_Yuuseix待7p809i',0x28,0x29,0x2a,0x2b,0x3c,0x18,0x3e8,0x2c,0xa,'$_Yuuseix待i6w1j','$_Yuuseix待d13m25j','$_Yuuseix待epvvsm','$_Yuuseix待swa7t','$_Yuuseix待28vjyv',0x14,'$_Yuuseix待d5lehl',0x3a,0x5d]}function $_Yuuseix待lm52dg($_Yuuseix待8h690l,$_Yuuseix待b3rota=0x0){var $_Yuuseix待t7xfzk=function(){return $_Yuuseix待8h690l(...arguments)};return $_Yuuseix待tzlp6d($_Yuuseix待t7xfzk,'length',{'value':$_Yuuseix待b3rota,'configurable':true})}
+    </script>
 </body>
 
-</html>
+    </html>
