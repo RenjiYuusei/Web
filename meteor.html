@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteors</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Include Tailwind CSS -->
+    <style>
+        /* Add your Tailwind configurations here or in a separate CSS file */
+        @layer utilities {
+            .size-\\[2\\.4px\\] {
+                width: 2.4px;
+                height: 2.4px;
+            }
+            @keyframes meteor {
+                0% { transform: rotate(215deg) translateX(0); opacity: 1; }
+                70% { opacity: 1; }
+                100% { transform: rotate(215deg) translateX(-500px); opacity: 0; }
+            }
+            .animate-meteor {
+                animation: meteor 5s linear infinite;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background">
+
+
+<div class="relative flex h-fit w-full max-w-lg items-center justify-center overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl">
+  
+    <p class="z-10 whitespace-pre-wrap text-center text-5xl tracking-tight font-semibold bg-gradient-to-br from-white to-blue-900/40 text-transparent bg-clip-text">
+        Meteors
+    </p>
+
+    <script>
+        // cn function (can be placed in a separate utility file)
+        function cn(...inputs) {
+            return inputs.filter(Boolean).join(' ');
+        }
+
+        const number = 30; // Number of meteors
+        let meteorStyles = [];
+
+        function changeMeteors(num) {
+            meteorStyles = [];
+            const styles = [...new Array(num)].map(() => ({
+                top: -20,
+                left: Math.floor(Math.random() * 700) + "px",
+                animationDelay: Math.random() * 1 + 0.2 + "s",
+                animationDuration: Math.floor(Math.random() * 8 + 2.9) + "s",
+            }));
+            meteorStyles = styles;
+        }
+
+        changeMeteors(number); // Initialize meteors
+
+
+        // Dynamically create meteor elements
+        const meteorContainer = document.querySelector('.relative'); // Select the container
+
+        meteorStyles.forEach((style, idx) => {
+            const meteor = document.createElement('span');
+            meteor.id = `meteor-${idx + 1}`;
+            meteor.classList.add(
+                ...cn(
+                    "pointer-events-none absolute left-1/2 top-1/2 size-[2.4px] rotate-[215deg] animate-meteor rounded-full bg-slate-500 shadow-[0_0_0_1px_#ffffff10]"
+                ).split(" ") // Split the string into an array for classList.add
+            );
+
+            meteor.style.top = style.top + "px";
+            meteor.style.left = style.left;
+            meteor.style.animationDelay = style.animationDelay;
+            meteor.style.animationDuration = style.animationDuration;
+
+
+            const tail = document.createElement('div');
+            tail.classList.add(
+                ...cn(
+                    "pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-slate-500 via-blue-600/30 to-transparent"
+                ).split(" ")
+            );
+
+            meteor.appendChild(tail);
+            meteorContainer.appendChild(meteor);
+        });
+    </script>
+</div>
+
+
+</body>
+</html>
