@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Web Navigation</title>
+		<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+		<style>
+			.card-hover:hover .fa-icon {
+				transform: scale(1.2);
+				transition: transform 0.3s ease;
+			}
+			.gradient-background {
+				background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+			}
+		</style>
+	</head>
+
+	<body class="bg-gradient-to-br from-blue-50 to-purple-50 min-h-screen">
+		<!-- Enhanced Navigation -->
+		<nav class="bg-white shadow-lg">
+			<div class="container mx-auto px-6 py-4">
+				<div class="flex justify-between items-center">
+					<div class="flex items-center">
+						<i class="fas fa-globe text-blue-600 text-3xl mr-3"></i>
+						<div class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">WebNav</div>
+					</div>
+					<div class="flex space-x-6">
+						<a href="index.html" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+							<i class="fas fa-home mr-2"></i>
+							<span>Home</span>
+						</a>
+						<a href="#" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+							<i class="fas fa-info-circle mr-2"></i>
+							<span>About</span>
+						</a>
+						<a href="daoluc.yy@gmail.com" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+							<i class="fas fa-envelope mr-2"></i>
+							<span>Contact</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Main Content -->
+		<div class="container mx-auto px-6 py-12">
+			<div class="text-center mb-16">
+				<h1 class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-6">Web Navigation</h1>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Discover our collection of interactive web experiences featuring stunning animations, precise countdowns, and captivating visual effects.</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="card-container"></div>
+		</div>
+
+		<!-- Enhanced Footer -->
+		<footer class="bg-white mt-16 border-t border-gray-200">
+			<div class="container mx-auto px-6 py-8">
+				<div class="flex justify-center space-x-6">
+					<a href="fb.com/RenjiYuusei" class="text-gray-400 hover:text-blue-600 transition-colors">
+						<i class="fab fa-facebook text-2xl"></i>
+					</a>
+					<a href="github.com/RenjiYuusei" class="text-gray-400 hover:text-blue-600 transition-colors">
+						<i class="fab fa-github text-2xl"></i>
+					</a>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			function createCard(title, description, link, icon, gradientColors) {
+				const card = document.createElement('div');
+				card.className = 'bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer card-hover';
+
+				card.innerHTML = `
+                <div class="h-48 flex items-center justify-center relative overflow-hidden"
+                     style="background: linear-gradient(120deg, ${gradientColors[0]} 0%, ${gradientColors[1]} 100%)">
+                    <i class="${icon} fa-icon text-white text-6xl transform transition-transform duration-300"></i>
+                </div>
+                <div class="p-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">${title}</h2>
+                    <p class="text-gray-600 leading-relaxed">${description}</p>
+                    <div class="mt-6 flex justify-end">
+                        <span class="text-blue-600 flex items-center group">
+                            Explore 
+                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform"></i>
+                        </span>
+                    </div>
+                </div>
+            `;
+
+				card.addEventListener('click', () => (window.location.href = link));
+				return card;
+			}
+
+			const cardContainer = document.getElementById('card-container');
+
+			// Enhanced cards with Font Awesome icons
+			const cards = [
+				{
+					title: 'Countdown to 2025',
+					description: 'Đếm còn bao nhiêu ngày đến tết.',
+					link: 'tet.html',
+					icon: 'fas fa-hourglass-half',
+					colors: ['#FF6B6B', '#FF8E8E'],
+				},
+				{
+					title: 'Photo Animation',
+					description: 'Bring your photos to life with stunning transition effects and interactive animations.',
+					link: 'parody.html',
+					icon: 'fas fa-camera-retro',
+					colors: ['#4E95F3', '#73B1F7'],
+				},
+				{
+					title: 'Meteors Animation',
+					description: 'Watch mesmerizing meteor showers with realistic particle effects and dynamic lighting.',
+					link: 'meteors.html',
+					icon: 'fas fa-meteor',
+					colors: ['#9C6EF3', '#B490F5'],
+				},
+			];
+
+			// Create and append cards
+			cards.forEach(card => {
+				const cardElement = createCard(card.title, card.description, card.link, card.icon, card.colors);
+				cardContainer.appendChild(cardElement);
+			});
+
+			// Enhanced GSAP animations
+			gsap.from('.card-hover', {
+				duration: 1,
+				opacity: 0,
+				y: 60,
+				stagger: 0.2,
+				ease: 'power3.out',
+			});
+
+			// Scroll-triggered animations
+			window.addEventListener('scroll', () => {
+				const cards = document.querySelectorAll('.card-hover');
+				cards.forEach(card => {
+					const cardTop = card.getBoundingClientRect().top;
+					if (cardTop < window.innerHeight - 100) {
+						card.style.opacity = '1';
+						card.style.transform = 'translateY(0)';
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
