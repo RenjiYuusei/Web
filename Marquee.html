@@ -3,132 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Marquee</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <title>Marquee Reviews</title>
+    <script src="https://cdn.tailwindcss.com"></script> 
     <style>
-        @keyframes marquee {
+         /* From Tailwind config, but added here for this example */
+         @keyframes marquee {
             from { transform: translateX(0); }
-            to { transform: translateX(calc(-100% - 1rem)); }
-        }
+            to { transform: translateX(calc(-100% - var(--gap))); }
+          }
+          @keyframes marquee-vertical {
+            from { transform: translateY(0); }
+            to { transform: translateY(calc(-100% - var(--gap))); }
+          }
 
         .animate-marquee {
             animation: marquee var(--duration) linear infinite;
         }
-
-        [data-reverse="true"] .animate-marquee {
-            animation-direction: reverse;
+        .animate-marquee-vertical {
+            animation: marquee-vertical var(--duration) linear infinite;
         }
-
-        .group:hover .group-hover\:\[animation-play-state\:paused\] {
+        .group-hover\:\[animation-play-state\:paused\]:hover {
             animation-play-state: paused;
         }
-
-        .dark {
-            background-color: #1a1a1a;
-            color: white;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            .dark\:from-background {
-                --tw-gradient-from: #1a1a1a;
-            }
+        .\[animation-direction\:reverse\] {
+            animation-direction: reverse;
         }
     </style>
 </head>
-<body class="min-h-screen">
-    <div class="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background py-20 md:shadow-xl">
-        <div class="group flex overflow-hidden p-2 [--duration:20s] [gap:1rem]" data-reverse="false">
-            <div class="flex shrink-0 justify-around gap-4 animate-marquee group-hover:[animation-play-state:paused]">
+<body class="bg-gray-100 dark:bg-gray-900">
+
+
+<div class="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background py-20 md:shadow-xl">
+  <div class="group flex overflow-hidden p-2 [--duration:20s] [--gap:1rem] flex-row">
+    <div class="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]">
+        <div class="relative w-64 cursor-pointer overflow-hidden rounded-2xl border p-4 border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]">
+            <div class="flex flex-row items-center gap-2">
+              <img class="rounded-full" width="32" height="32" alt="" src="https://avatar.vercel.sh/jack">
+              <div class="flex flex-col">
+                <figcaption class="text-sm font-medium dark:text-white">Bhide</figcaption>
+                <p class="text-xs font-medium dark:text-white/40">@Bhide</p>
+              </div>
             </div>
-            <div class="flex shrink-0 justify-around gap-4 animate-marquee group-hover:[animation-play-state:paused]">
+            <blockquote class="mt-2 text-sm">Noicee work. I love it. Keep it up.</blockquote>
+          </div>
+          <div class="relative w-64 cursor-pointer overflow-hidden rounded-2xl border p-4 border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]">
+            <div class="flex flex-row items-center gap-2">
+              <img class="rounded-full" width="32" height="32" alt="" src="https://avatar.vercel.sh/jill">
+              <div class="flex flex-col">
+                <figcaption class="text-sm font-medium dark:text-white">Jodd</figcaption>
+                <p class="text-xs font-medium dark:text-white/40">@Jodd</p>
+              </div>
             </div>
+            <blockquote class="mt-2 text-sm">Wooww, this is what I was looking for. Great work.</blockquote>
+          </div>
+          <div class="relative w-64 cursor-pointer overflow-hidden rounded-2xl border p-4 border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]">
+            <div class="flex flex-row items-center gap-2">
+              <img class="rounded-full" width="32" height="32" alt="" src="https://avatar.vercel.sh/john">
+              <div class="flex flex-col">
+                <figcaption class="text-sm font-medium dark:text-white">Pokie</figcaption>
+                <p class="text-xs font-medium dark:text-white/40">@Pokie</p>
+              </div>
+            </div>
+            <blockquote class="mt-2 text-sm">Svelte is Amazing and so are you. Keep it up.</blockquote>
+          </div>
         </div>
-
-        <div class="group flex overflow-hidden p-2 [--duration:20s] [gap:1rem]" data-reverse="true">
-            <div class="flex shrink-0 justify-around gap-4 animate-marquee group-hover:[animation-play-state:paused]">
-            </div>
-            <div class="flex shrink-0 justify-around gap-4 animate-marquee group-hover:[animation-play-state:paused]">
-            </div>
-        </div>
-
-        <div class="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-        <div class="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
-    </div>
-
-    <script>
-        const reviews = [
-            {
-                name: "Bhide",
-                username: "@Bhide",
-                body: "Noicee work. I love it. Keep it up.",
-                img: "/api/placeholder/32/32"
-            },
-            {
-                name: "Jodd",
-                username: "@Jodd",
-                body: "Wooww, this is what I was looking for. Great work.",
-                img: "/api/placeholder/32/32"
-            },
-            {
-                name: "Pokie",
-                username: "@Pokie",
-                body: "Svelte is Amazing and so are you. Keep it up.",
-                img: "/api/placeholder/32/32"
-            },
-            {
-                name: "pablo",
-                username: "@pablo",
-                body: "Remarkable Stuff broooo. Added to my favourites.",
-                img: "/api/placeholder/32/32"
-            },
-            {
-                name: "Saloni",
-                username: "@Saloni",
-                body: "Acche hai, Chal mera Portfolio banade.",
-                img: "/api/placeholder/32/32"
-            },
-            {
-                name: "Bhai",
-                username: "@Bhai",
-                body: "Svelte made easy with these components. Great work.",
-                img: "/api/placeholder/32/32"
-            }
-        ];
-
-        function createReviewCard(review) {
-            return `
-                <figure class="relative w-64 cursor-pointer overflow-hidden rounded-2xl border p-4 border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]">
-                    <div class="flex flex-row items-center gap-2">
-                        <img class="rounded-full" width="32" height="32" alt="" src="${review.img}" />
-                        <div class="flex flex-col">
-                            <figcaption class="text-sm font-medium dark:text-white">
-                                ${review.name}
-                            </figcaption>
-                            <p class="text-xs font-medium dark:text-white/40">${review.username}</p>
-                        </div>
-                    </div>
-                    <blockquote class="mt-2 text-sm">${review.body}</blockquote>
-                </figure>
-            `;
-        }
-
-        const firstRow = reviews.slice(0, reviews.length / 2);
-        const secondRow = reviews.slice(reviews.length / 2);
-
-        // Fill first marquee
-        document.querySelectorAll('[data-reverse="false"] .animate-marquee').forEach(container => {
-            container.innerHTML = firstRow.map(review => createReviewCard(review)).join('');
-        });
-
-        // Fill second marquee
-        document.querySelectorAll('[data-reverse="true"] .animate-marquee').forEach(container => {
-            container.innerHTML = secondRow.map(review => createReviewCard(review)).join('');
-        });
-
-        // Dark mode toggle based on system preference
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.body.classList.add('dark');
-        }
-    </script>
+      </div>
+  </div>
 </body>
-</html>
+                  </html>
